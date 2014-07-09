@@ -17,7 +17,7 @@
         </dependency>
         <dependency>
             <groupId>com.appspot.trak</groupId>
-            <artifactId>location</artifactId>
+            <artifactId>movement</artifactId>
             <version>v1-1.18.0-rc-SNAPSHOT</version>
         </dependency>
         <dependency>

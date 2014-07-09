@@ -4,7 +4,7 @@ package pl.com.turski.rfid;
  * User: Adam
  */
 public enum SettingKey {
-    SERVER_URL("http://192.168.1.2:8080/_ah/api"), VEHICLE_ID("1"), LOCALIZATION_FREQUENCY("120000");
+    SERVER_URL("http://192.168.1.2:8080/_ah/api"), GATE_ID("1");
 
     private String defValue;
 

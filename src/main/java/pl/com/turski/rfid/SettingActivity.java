@@ -13,8 +13,7 @@ import pl.com.turski.trak.rfid.R;
 public class SettingActivity extends Activity {
 
     TextView serverUrlText;
-    TextView vehicleIdText;
-    TextView localizationFrequencyText;
+    TextView gateIdText;
     Button saveButton;
     Button cancelButton;
 
@@ -29,10 +28,8 @@ public class SettingActivity extends Activity {
         SharedPreferences settings = this.getSharedPreferences("pl.com.turski.trak.rfid", Context.MODE_PRIVATE);
         serverUrlText = (TextView) findViewById(R.id.serverUrlText);
         serverUrlText.setText(settings.getString(SettingKey.SERVER_URL.getKey(), SettingKey.SERVER_URL.getDefValue()));
-        vehicleIdText = (TextView) findViewById(R.id.vehicleIdText);
-        vehicleIdText.setText(settings.getString(SettingKey.VEHICLE_ID.getKey(), SettingKey.VEHICLE_ID.getDefValue()));
-        localizationFrequencyText = (TextView) findViewById(R.id.localizationFrequencyText);
-        localizationFrequencyText.setText(settings.getString(SettingKey.LOCALIZATION_FREQUENCY.getKey(), SettingKey.LOCALIZATION_FREQUENCY.getDefValue()));
+        gateIdText = (TextView) findViewById(R.id.gateIdText);
+        gateIdText.setText(settings.getString(SettingKey.GATE_ID.getKey(), SettingKey.GATE_ID.getDefValue()));
         final Context context = this;
         saveButton = (Button) findViewById(R.id.saveButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -55,8 +52,7 @@ public class SettingActivity extends Activity {
         SharedPreferences settings = this.getSharedPreferences("pl.com.turski.trak.rfid", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(SettingKey.SERVER_URL.getKey(), serverUrlText.getText().toString());
-        editor.putString(SettingKey.VEHICLE_ID.getKey(), vehicleIdText.getText().toString());
-        editor.putString(SettingKey.LOCALIZATION_FREQUENCY.getKey(), localizationFrequencyText.getText().toString());
+        editor.putString(SettingKey.GATE_ID.getKey(), gateIdText.getText().toString());
         editor.commit();
     }
 }

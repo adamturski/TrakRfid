@@ -3,7 +3,7 @@ package pl.com.turski.rfid;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.appspot.trak.location.Location;
+import com.appspot.trak.movement.Movement;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
 
@@ -11,6 +11,8 @@ import com.google.api.client.json.gson.GsonFactory;
  * User: Adam
  */
 public class App extends Application {
+
+    public final static String TAG = "TRAK_RFID";
 
     private static Context context;
 
@@ -23,10 +25,10 @@ public class App extends Application {
         return App.context;
     }
 
-    public static Location getMovementService() {
+    public static Movement getMovementService() {
         SharedPreferences settings = App.getAppContext().getSharedPreferences("pl.com.turski.trak.rfid", Context.MODE_PRIVATE);
         String serverUrl = settings.getString(SettingKey.SERVER_URL.getKey(), SettingKey.SERVER_URL.getDefValue());
-        Movement.Builder builder = new Location.Builder(
+        Movement.Builder builder = new Movement.Builder(
                 new ApacheHttpTransport(), new GsonFactory(), null).setRootUrl(serverUrl);
         return builder.build();
     }
