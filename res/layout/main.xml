@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center" android:columnCount="3"
+            android:padding="5dp" android:useDefaultMargins="true">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status rfid:"
+                android:layout_gravity="center_vertical" android:textStyle="bold" android:layout_column="0"
+                android:layout_row="0"/>
+        <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/rfidStatusLabel" android:layout_column="1" android:layout_row="0"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odśwież"
+                android:id="@+id/rfidStatusRefreshButton" android:layout_row="0" android:layout_column="2"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" android:layout_gravity="center_vertical" android:textStyle="bold"
+                android:layout_column="0" android:layout_row="1" android:text="Status połączenia:"/>
+        <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/appStatusLabel" android:layout_column="1" android:layout_row="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odśwież"
+                android:id="@+id/appStatusRefreshButton" android:layout_row="1" android:layout_column="2"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status serwisu:"
+                android:id="@+id/textView" android:layout_row="2" android:layout_column="0"
+                android:layout_gravity="center_vertical" android:textStyle="bold"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:id="@+id/serviceStatusLabel" android:layout_row="2" android:layout_column="1"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odśwież"
+                android:id="@+id/serviceStatusRefreshButton" android:layout_row="2" android:layout_column="2"/>
+    </GridLayout>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ustawienia"
+            android:id="@+id/settingsButton" android:layout_gravity="center"/>
+</LinearLayout>
+
