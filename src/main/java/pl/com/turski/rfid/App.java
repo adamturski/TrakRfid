@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import com.appspot.trak.movement.Movement;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
+import pl.com.turski.rfid.settings.SettingKey;
 
 /**
  * User: Adam

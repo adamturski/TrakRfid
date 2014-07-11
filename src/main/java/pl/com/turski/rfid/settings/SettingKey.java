@@ -1,4 +1,4 @@
-package pl.com.turski.rfid;
+package pl.com.turski.rfid.settings;
 
 /**
  * User: Adam

@@ -11,13 +11,8 @@
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
                  android:name="pl.com.turski.rfid.App">
 
-        <activity android:name="pl.com.turski.rfid.MainActivity"
+        <activity android:name="pl.com.turski.rfid.activity.MainActivity"
                   android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -30,7 +25,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="pl.com.turski.rfid.SettingActivity"
+        <activity android:name="pl.com.turski.rfid.activity.SettingActivity"
                   android:label="@string/app_name">
         </activity>
     </application>
