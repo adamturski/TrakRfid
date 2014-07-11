@@ -13,6 +13,7 @@ import pl.com.turski.rfid.settings.SettingKey;
  */
 public class App extends Application {
 
+    public static final String MIME_TEXT_PLAIN = "text/plain";
     public final static String TAG = "TRAK_RFID";
 
     private static Context context;

@@ -24,8 +24,6 @@ import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
-    public static final String MIME_TEXT_PLAIN = "text/plain";
-
     private SharedPreferences settings;
     private NfcAdapter nfcAdapter;
 
@@ -71,7 +69,7 @@ public class MainActivity extends Activity {
         String action = intent.getAction();
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
             String type = intent.getType();
-            if (MIME_TEXT_PLAIN.equals(type)) {
+            if (App.MIME_TEXT_PLAIN.equals(type)) {
                 Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
                 new SubmitMovementTask(this).execute(tag);
             } else {
@@ -99,7 +97,7 @@ public class MainActivity extends Activity {
         filters[0].addAction(NfcAdapter.ACTION_NDEF_DISCOVERED);
         filters[0].addCategory(Intent.CATEGORY_DEFAULT);
         try {
-            filters[0].addDataType(MIME_TEXT_PLAIN);
+            filters[0].addDataType(App.MIME_TEXT_PLAIN);
         } catch (IntentFilter.MalformedMimeTypeException e) {
             throw new RuntimeException("Check your mime type.");
         }
